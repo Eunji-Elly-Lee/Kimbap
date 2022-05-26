@@ -7,6 +7,7 @@
     <class>models.Gimbap</class>
     <class>models.User</class>
     <class>models.Location</class>
+    <class>models.OrderDetail</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
   </persistence-unit>
 </persistence>

@@ -1,9 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package models;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import java.util.List;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
+/**
+ *
+ * @author duckp
+ */
 @Entity
 @Table(name = "order")
 @XmlRootElement
@@ -22,6 +46,8 @@ public class OrderInfo implements Serializable {
     @Basic(optional = false)
     @Column(name = "name")
     private String name;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "orderInfo", fetch = FetchType.EAGER)
+    private List<OrderDetail> orderDetailList;
     @JoinColumn(name = "location", referencedColumnName = "location_id")
     @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Location location;
@@ -52,6 +78,15 @@ public class OrderInfo implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @XmlTransient
+    public List<OrderDetail> getOrderDetailList() {
+        return orderDetailList;
+    }
+
+    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
+        this.orderDetailList = orderDetailList;
     }
 
     public Location getLocation() {
@@ -86,4 +121,5 @@ public class OrderInfo implements Serializable {
     public String toString() {
         return "models.OrderInfo[ orderId=" + orderId + " ]";
     }
+    
 }
