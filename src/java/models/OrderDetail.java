@@ -1,27 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author duckp
- */
 @Entity
 @Table(name = "order_detail")
 @XmlRootElement
@@ -32,7 +14,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "OrderDetail.findByGimbapId", query = "SELECT o FROM OrderDetail o WHERE o.orderDetailPK.gimbapId = :gimbapId")
     , @NamedQuery(name = "OrderDetail.findByQuantity", query = "SELECT o FROM OrderDetail o WHERE o.quantity = :quantity")})
 public class OrderDetail implements Serializable {
-
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected OrderDetailPK orderDetailPK;
@@ -129,5 +110,4 @@ public class OrderDetail implements Serializable {
     public String toString() {
         return "models.OrderDetail[ orderDetailPK=" + orderDetailPK + " ]";
     }
-    
 }
