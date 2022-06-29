@@ -1,0 +1,29 @@
+.menu {
+  padding: 0;
+}
+.menu:nth-child(2) {
+  padding-right: 8px;
+  margin-left: 20px;
+}
+.header-logo {
+  width: 190px;
+  margin-right: 190px;
+}
+.signin {
+  color: black;
+  font-weight: 500;
+  padding: 8px;
+}
+.signin:hover {
+  color: black;
+  border-bottom: 1px solid;
+}
+
+@media screen and (min-width:380px) {
+  .header-logo {
+    margin-right: 0;
+  }
+  .menu:nth-child(2) {
+    margin-left: 0;
+  }
+}
