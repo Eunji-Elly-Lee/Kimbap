@@ -17,7 +17,7 @@ function Header() {
           </Col>
           <Col className="menu">
             <Link to="/signup">
-              <Button variant="outline-dark">Sign Up</Button>
+              <Button variant="outline-dark" className="signup">Sign Up</Button>
             </Link>
           </Col>
         </Row>
