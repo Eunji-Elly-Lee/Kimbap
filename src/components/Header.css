@@ -1,24 +1,15 @@
-.menu {
-  padding: 0;
-}
-.menu:first-child {
+.header-menu:first-child {
   width: 100%;
 }
-.menu:nth-child(2) {
+.header-menu:nth-child(2) {
   margin-left: 18px;
-  padding-right: 8px;
 }
 .header-logo {
   width: 190px;
 }
 .signin {
-  color: black;
   font-weight: 500;
   padding: 8px;
-  position: relative;
-}
-.signin:hover {
-  color: black;
 }
 .signin::after {
   content: '';
@@ -41,10 +32,10 @@
 }
 
 @media screen and (min-width:380px) {
-  .menu:first-child {
+  .header-menu:first-child {
     width: auto;
   }
-  .menu:nth-child(2) {
+  .header-menu:nth-child(2) {
     margin-left: 0;
   }
 }
