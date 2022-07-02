@@ -1,0 +1,13 @@
+.footer {
+  background-color: black;
+  margin-top: 8vh;
+}
+.footer-logo {
+  width: 190px;
+}
+
+@media screen and (min-width:576px) {
+  .footer {
+      margin-top: 27vh;
+  }
+}
