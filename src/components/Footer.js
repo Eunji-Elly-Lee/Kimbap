@@ -1,7 +1,35 @@
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Footer.css';
+
 function Footer() {
   return (
-    <div>
-      
+    <div className="footer pt-4">
+      <Container className="text-center text-white">
+        <Row>
+          <Col>
+            <Link to="/">
+              <img className="footer-logo" src="./assets/logo_white.gif" alt="logo" />
+            </Link>
+          </Col>
+        </Row>
+        <Row xs="auto" className="mx-2 justify-content-center">
+          <Col>
+            Mail:&nbsp;
+            <a className="text-white" href="mailto:eunji.lee@edu.sait.ca">
+              eunji.lee@edu.sait.ca
+            </a>
+          </Col>
+          <Col>
+            Phone: 1-825-365-9828
+          </Col>
+        </Row>
+        <Row className="py-4">
+          <Col>
+            &copy; 2022 Gimbap
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
