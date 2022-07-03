@@ -1,0 +1,68 @@
+.signUp {
+  width: 80%;
+  margin: 15vh auto 35vh;
+}
+.signUp-icon {
+  width: 100%;
+}
+.signUp-button {
+  width: 91%;
+  margin-left: 3%;
+}
+
+@media screen and (min-width:380px) {
+  .signUp-icon {
+    width: auto;
+  }
+  .signUp-button {
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .signUp {
+    width: 70%;
+  }
+  .signUp-button {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .signUp {
+    width: 50%;
+  }
+  .signUp-button {
+    width: 97%;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .signUp {
+    width: 45%;
+    margin-bottom: 40vh;
+  }
+  .signUp-button {
+    width: 96%;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .signUp {
+    width: 43%;
+  }
+  .signUp-button {
+    width: 94%;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .signUp {
+    width: 40%;
+  }
+  .signUp-button {
+    width: 92%;
+  }
+}
