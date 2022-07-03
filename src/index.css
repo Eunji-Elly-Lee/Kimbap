@@ -1,12 +1,12 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@400;500;600&display=swap');
 
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Finlandica', sans-serif;
 }
 a {
   text-decoration: none;
