@@ -1,6 +1,7 @@
 .main-menu {
   max-width: 300px;
-  background-image: linear-gradient(to right top, #fed142, #f2da3d, #e4e33b, #d4ec3e, #c1f445);
+  /* background-image: linear-gradient(to right top, #fed142, #f2da3d, #e4e33b, #d4ec3e, #c1f445); */
+  background-color: black;
   font-weight:500;
 }
 .main-menu::after {
