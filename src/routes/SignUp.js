@@ -1,6 +1,6 @@
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { IoPersonAddSharp } from "react-icons/io5";
-import './SignUp.css';
+import 'routes/SignUp.css';
 import { useState } from "react";
 
 function SignUp() {
