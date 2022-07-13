@@ -1,7 +1,7 @@
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useState } from "react";
+import { Form, Row, Col, Button } from 'react-bootstrap';
 import { IoPersonAddSharp } from "react-icons/io5";
 import 'routes/SignUp.css';
-import { useState } from "react";
 
 function SignUp() {
   const [email, setEmail] = useState("");
