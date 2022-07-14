@@ -4,7 +4,7 @@ import 'components/Footer.css';
 
 function Footer() {
   return (
-    <div className="footer pt-4 bg-black">
+    <div className="pt-4 bg-black">
       <Container className="text-center text-white">
         <Row>
           <Col>
