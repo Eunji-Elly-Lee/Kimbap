@@ -11,8 +11,7 @@ function Menu() {
       <Form className="mt-4">
         <Gimbap />
         <Location />
-        <Button variant="dark" type="submit"
-          className="w-100 mt-3 rounded-0">
+        <Button type="submit" className="w-100 mt-3">
           Order
         </Button>
       </Form>
