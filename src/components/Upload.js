@@ -9,29 +9,25 @@ function Upload() {
         <Form.Group as={Row} className="mt-3 mb-1">
           <Form.Label column sm="2">Image:</Form.Label>
           <Col>
-            <Form.Control type="file" accept="image/*"
-              className="border-dark rounded-0" />
+            <Form.Control type="file" accept="image/*" />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="my-1">
           <Form.Label column sm="2">Name:</Form.Label>
           <Col>
-            <Form.Control type="text"
-              className="border-dark rounded-0"/>
+            <Form.Control type="text" />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="my-1">
           <Form.Label column sm="2">Ingredients:</Form.Label>
           <Col>
-            <Form.Control type="text"
-              className="border-dark rounded-0"/>
+            <Form.Control type="text" />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="my-1">
           <Form.Label column sm="2">Price:</Form.Label>
           <Col>
-            <Form.Control type="number"
-              className="border-dark rounded-0"/>
+            <Form.Control type="number" />
           </Col>
         </Form.Group>
         <Button variant="dark" type="submit"
@@ -50,8 +46,7 @@ function Upload() {
         <Form.Group as={Row} className="mt-1">
           <Form.Label column sm="2">Location:</Form.Label>
           <Col>
-            <Form.Control type="text"
-              className="border-dark rounded-0"/>
+            <Form.Control type="text" />
           </Col>
         </Form.Group>
         <Button variant="dark" type="submit"
