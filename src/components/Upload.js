@@ -3,7 +3,7 @@ import 'components/Upload.css';
 
 function Upload() {
   return (
-    <div className="upload">
+    <div>
       <Form>
         <h4>Upload Gimbap</h4>
         <Form.Group as={Row} className="mt-3 mb-1">
