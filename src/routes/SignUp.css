@@ -11,6 +11,9 @@
 }
 
 @media screen and (min-width:380px) {
+  .signUp {
+    margin-top: 20vh;
+  }
   .signUp-icon {
     width: auto;
   }
