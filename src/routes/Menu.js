@@ -1,10 +1,12 @@
-import { Button, Form } from 'react-bootstrap';
-import './Menu.css';
+import Upload from "components/Upload";
+import { Form, Button } from 'react-bootstrap';
+import 'routes/Menu.css';
 
 function Menu() {
   return (
     <div className="menu">
-      <Form>        
+      <Upload />
+      <Form>
         <Button variant="dark" type="submit"
           className="rounded-0">
           Order
