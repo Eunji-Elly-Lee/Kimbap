@@ -23,12 +23,11 @@ function SignIn() {
           </Form.Label>
           <Col xs="10" className="p-0 me-2">
             <Form.Control type="email" placeholder="Email"
-              className="border-0 border-bottom border-dark rounded-0"
+              className="border-0 border-bottom border-dark"
               value={email} onChange={(e) => setEmail(e.target.value)} />
           </Col>
         </Form.Group>
-        <Button variant="dark" type="submit"
-          className="signIn-button mt-5 d-block rounded-0">
+        <Button type="submit" className="signIn-button mt-5 d-block">
           Sign In
         </Button>
       </Form>
