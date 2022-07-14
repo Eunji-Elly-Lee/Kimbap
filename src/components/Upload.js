@@ -30,8 +30,7 @@ function Upload() {
             <Form.Control type="number" />
           </Col>
         </Form.Group>
-        <Button variant="dark" type="submit"
-          className="w-100 mt-3 rounded-0">
+        <Button type="submit" className="w-100 mt-3">
           Upload
         </Button>
       </Form>
@@ -49,8 +48,7 @@ function Upload() {
             <Form.Control type="text" />
           </Col>
         </Form.Group>
-        <Button variant="dark" type="submit"
-          className="w-100 mt-3 rounded-0">
+        <Button type="submit" className="w-100 mt-3">
           Upload
         </Button>
       </Form>
