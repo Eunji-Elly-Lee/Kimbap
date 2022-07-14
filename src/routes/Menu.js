@@ -1,14 +1,14 @@
-import Upload from "components/Upload";
+import Upload from 'components/Upload';
 import { Form, Button } from 'react-bootstrap';
 import 'routes/Menu.css';
 
 function Menu() {
   return (
-    <div className="menu">
+    <div className="menu mx-auto mt-4">
       <Upload />
-      <Form>
+      <Form className="mt-4">
         <Button variant="dark" type="submit"
-          className="rounded-0">
+          className="w-100 mt-3 rounded-0">
           Order
         </Button>
       </Form>
