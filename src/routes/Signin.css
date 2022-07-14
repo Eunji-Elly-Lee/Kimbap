@@ -11,6 +11,9 @@
 }
 
 @media screen and (min-width:380px) {
+  .signIn {
+    margin-top: 20vh;
+  }
   .signIn-icon {
     width: auto;
   }
