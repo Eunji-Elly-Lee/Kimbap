@@ -1,5 +1,6 @@
 .menu {
   width: 92%;
+  margin-bottom: 8vh;
 }
 
 @media screen and (min-width:576px) {
