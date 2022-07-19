@@ -1,6 +1,6 @@
 .signIn {
   width: 80%;
-  margin: 15vh auto 35vh;
+  margin: 12vh auto 30vh;
 }
 .signIn-icon {
   width: 100%;
@@ -9,10 +9,14 @@
   width: 91%;
   margin-left: 3%;
 }
+.popup-error {
+  width: 80%;
+  margin: 8px auto 0;
+}
 
 @media screen and (min-width:380px) {
   .signIn {
-    margin-top: 20vh;
+    margin-top: 18vh;
   }
   .signIn-icon {
     width: auto;
@@ -21,6 +25,10 @@
     width: 99%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .email-message,
+  .popup-error {
+    padding-left: 3%;
   }
 }
 
