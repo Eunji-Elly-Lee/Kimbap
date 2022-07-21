@@ -2,33 +2,10 @@
   width: 80%;
   margin: 12vh auto 30vh;
 }
-.signIn-icon {
-  width: 100%;
-}
-.signIn-button {
-  width: 91%;
-  margin-left: 3%;
-}
-.popup-error {
-  width: 80%;
-  margin: 8px auto 0;
-}
 
 @media screen and (min-width:380px) {
   .signIn {
     margin-top: 18vh;
-  }
-  .signIn-icon {
-    width: auto;
-  }
-  .signIn-button {
-    width: 99%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .email-message,
-  .popup-error {
-    padding-left: 3%;
   }
 }
 
@@ -36,17 +13,11 @@
   .signIn {
     width: 70%;
   }
-  .signIn-button {
-    width: 98%;
-  }
 }
 
 @media screen and (min-width:768px) {
   .signIn {
     width: 50%;
-  }
-  .signIn-button {
-    width: 97%;
   }
 }
 
@@ -55,25 +26,16 @@
     width: 45%;
     margin-bottom: 36vh;
   }
-  .signIn-button {
-    width: 96%;
-  }
 }
 
 @media screen and (min-width:1200px) {
   .signIn {
     width: 43%;
   }
-  .signIn-button {
-    width: 94%;
-  }
 }
 
 @media screen and (min-width:1400px) {
   .signIn {
     width: 40%;
-  }
-  .signIn-button {
-    width: 92%;
   }
 }
