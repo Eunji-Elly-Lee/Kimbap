@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { authService, firebaseInstance } from 'fbase';
 import { Form, Row, Col, Button, Spinner } from 'react-bootstrap';
 import { IoPersonSharp } from 'react-icons/io5';
 import 'routes/SignIn.css';
 
-function SignIn() {
+function SignIn({ user }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [sendingEmail, setSendingEmail] = useState(false);
@@ -48,6 +48,11 @@ function SignIn() {
       }
     }
   };
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   return (
     <div className="signIn">
