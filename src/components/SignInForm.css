@@ -1,0 +1,51 @@
+.signIn-icon {
+  width: 100%;
+}
+.signIn-button {
+  width: 91%;
+  margin-left: 3%;
+}
+
+@media screen and (min-width:380px) {
+  .message {
+    padding-left: 3%;
+  }
+  .signIn-icon {
+    width: auto;
+  }
+  .signIn-button {
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .signIn-button {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .signIn-button {
+    width: 97%;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .signIn-button {
+    width: 96%;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .signIn-button {
+    width: 94%;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .signIn-button {
+    width: 92%;
+  }
+}
