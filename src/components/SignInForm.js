@@ -37,7 +37,7 @@ function SignInForm() {
 
   return (
     <div>
-      <div className="message mb-3 text-center">{message}</div>
+      <div className="signIn-message mb-3 text-center">{message}</div>
       <Form onSubmit={onSubmit}>
         <Form.Group as={Row} className="justify-content-center">
           <Form.Label column xs="1" className="signIn-icon text-center">
