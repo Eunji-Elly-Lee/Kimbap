@@ -76,7 +76,7 @@ function SignIn() {
         </Button>
       </Form>
       <Button type="submit" onClick={onClick}
-        className="signUp-button mt-5 d-block">
+        className="signIn-button mt-5 d-block">
         Continue with Google
       </Button>
       <div className="popup-error text-center">{errorMessage}</div>
