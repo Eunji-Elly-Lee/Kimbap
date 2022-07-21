@@ -29,7 +29,7 @@ function SocialSignIn() {
         className="social-button mt-5 d-block">
         Continue with Google
       </Button>
-      <div className="message text-center">{message}</div>
+      <div className="social-error mt-3 text-center">{message}</div>
     </div>
   );
 }
