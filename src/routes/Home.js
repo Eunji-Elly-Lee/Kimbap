@@ -50,7 +50,7 @@ function Home() {
   return (
     <div className="home">
       <div className="mt-5 mb-sm-3 text-center">{message}</div>
-      {emailConfirmation ?
+      {emailConfirmation ? (
         <Form onSubmit={onSubmit} className="confirm-form mx-auto">
           <Form.Group as={Row} className="justify-content-center">
             <Form.Label column xs="1" className="confirm-icon text-center">
@@ -64,16 +64,16 @@ function Home() {
           </Form.Group>
           <Button type="submit" variant="dark" disabled={submittingEmail}
             className="confirm-button mt-5 d-block">
-            {submittingEmail ?
+            {submittingEmail ? (
               <>
               <Spinner as="span" animation="border" size="sm"
                 role="status" aria-hidden="true" />
               <span className="visually-hidden">Submitting...</span>
-              </> :
-              "Submit"
-            }
+              </>
+            ) : "Submit"}
           </Button>
-        </Form> :
+        </Form>
+      ) : (
         <Container>
           <Row className="justify-content-evenly">
             <Col xs="5" sm="4" md="3"
@@ -92,7 +92,7 @@ function Home() {
             </Col>
           </Row>
         </Container>
-      }
+      )}
     </div>
   );
 }
