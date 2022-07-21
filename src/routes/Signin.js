@@ -65,14 +65,13 @@ function SignIn() {
         </Form.Group>
         <Button type="submit" variant="dark" disabled={sendingEmail}
           className="signIn-button mt-5 d-block">
-          {sendingEmail ?
+          {sendingEmail ? (
             <>
             <Spinner as="span" animation="border" size="sm"
               role="status" aria-hidden="true" />
             <span className="visually-hidden">Sending...</span>
-            </> :
-            "Sign In"
-          }
+            </>
+          ) : "Sign In"}
         </Button>
       </Form>
       <Button type="submit" onClick={onClick}
