@@ -1,11 +1,18 @@
-.header-menu:first-child {
+.login-logo,
+.logout-logo {
   width: 100%;
-}
-.header-menu:nth-child(2) {
-  margin-left: 18px;
 }
 .header-logo {
   width: 190px;
+}
+.header-name {
+  margin-left: 25px;
+}
+.logout {
+  transition: 0.5s;
+}
+.header-signin {
+  margin-left: 18px;
 }
 .signin {
   font-weight: 500;
@@ -27,15 +34,21 @@
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
-.signup {
-  transition: 0.5s;
-}
 
-@media screen and (min-width:380px) {
-  .header-menu:first-child {
+@media screen and (min-width:315px) {
+  .logout-logo {
     width: auto;
   }
-  .header-menu:nth-child(2) {
+  .header-signin {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width:500px) {
+  .login-logo {
+    width: auto;
+  }
+  .header-name {
     margin-left: 0;
   }
 }
