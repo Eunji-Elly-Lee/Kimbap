@@ -16,7 +16,7 @@ function SignInForm() {
     try {
       setSendingEmail(true);
       const actionCodeSettings = {
-        url: "http://localhost:3000",
+        url: "http://localhost:3000/auth",
         handleCodeInApp: true
       };
       await authService.sendSignInLinkToEmail(email, actionCodeSettings)
@@ -28,6 +28,7 @@ function SignInForm() {
         });
     } catch (error) {
       if (error.code === "auth/invalid-email") {
+        setSendingEmail(false);
         setMessage("The email address is not valid!");
       } else {
         console.log(error);
