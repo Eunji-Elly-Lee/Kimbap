@@ -3,10 +3,9 @@ import { useState, useCallback, useEffect } from 'react';
 import { authService } from 'fbase';
 import { Form, Row, Col, Button, Spinner } from 'react-bootstrap';
 import { IoPencilSharp } from 'react-icons/io5';
-import PropTypes from 'prop-types';
 import 'routes/Auth.css';
 
-function Auth({ user }) {
+function Auth() {
   const href = window.location.href;
   const navigate = useNavigate();
   const [emailForSignIn, setEmailForSignIn] =
@@ -42,11 +41,6 @@ function Auth({ user }) {
       }
     }
   }, [emailForSignIn, href, navigate]);
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  }, [user, navigate]);
   useEffect(() => {
     if (authService.isSignInWithEmailLink(href)) {
       signIn();
@@ -85,9 +79,5 @@ function Auth({ user }) {
     </div>
   );
 }
-
-Auth.propTypes = {
-  user: PropTypes.object
-};
 
 export default Auth;
