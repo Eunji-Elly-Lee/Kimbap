@@ -1,17 +1,5 @@
 .home {
-  margin-bottom: 9vh;
-}
-.confirm-form {
-  width: 80%;
-  margin-top: 10vh;
-  margin-bottom: 30vh;
-}
-.confirm-icon {
-  width: 100%;
-}
-.confirm-button {
-  width: 91%;
-  margin-left: 3%;
+  margin: 5vh 0 9vh;
 }
 .main-menu {
   max-width: 300px;
@@ -35,65 +23,8 @@
   transform: rotate(7deg);
 }
 
-@media screen and (min-width:380px) {
-  .confirm-form {
-    margin-top: 15vh;
-  }
-  .confirm-icon {
-    width: auto;
-  }
-  .confirm-button {
-    width: 99%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 @media screen and (min-width:576px) {
   .home {
     margin: 13vh 0 28vh;
-  }
-  .confirm-form {
-    width: 70%;
-    margin-top: 8vh;
-  }
-  .confirm-button {
-    width: 98%;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .confirm-form {
-    width: 50%;
-  }
-  .confirm-button {
-    width: 97%;
-  }
-}
-
-@media screen and (min-width:992px) {
-  .confirm-form  {
-    width: 45%;
-  }
-  .confirm-button {
-    width: 96%;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .confirm-form {
-    width: 43%;
-  }
-  .confirm-button {
-    width: 94%;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  .confirm-form {
-    width: 40%;
-  }
-  .confirm-button {
-    width: 92%;
   }
 }
