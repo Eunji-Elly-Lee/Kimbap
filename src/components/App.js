@@ -28,7 +28,7 @@ function App() {
         <Header user={userObj} logOut={logOut} />
         <Routes>
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
-          <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth user={userObj} />} />
+          <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
           <Route basename={process.env.PUBLIC_URL} path="/signin" element={<SignIn user={userObj} />} />
           <Route basename={process.env.PUBLIC_URL} path="/menu" element={<Menu user={userObj} />} />
           <Route basename={process.env.PUBLIC_URL} path="/orders" element={<Orders user={userObj} />} />
