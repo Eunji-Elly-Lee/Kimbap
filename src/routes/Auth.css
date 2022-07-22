@@ -1,0 +1,74 @@
+.auth {
+  width: 80%;
+  margin: 16vh auto 32vh;
+}
+.auth-icon {
+  width: 100%;
+}
+.auth-button {
+  width: 91%;
+  margin-left: 3%;
+}
+
+@media screen and (min-width:380px) {
+  .auth {
+    margin: 20vh auto 34vh;
+  }
+  .auth-message {
+    padding-left: 3%;
+  }
+  .auth-icon {
+    width: auto;
+  }
+  .auth-button {
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .auth {
+    width: 70%;
+  }
+  .auth-button {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .auth {
+    width: 50%;
+  }
+  .auth-button {
+    width: 97%;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .auth {
+    width: 45%;
+    margin: 23vh auto 38vh;
+  }
+  .auth-button {
+    width: 96%;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .auth {
+    width: 43%;
+  }
+  .auth-button {
+    width: 94%;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .auth {
+    width: 40%;
+  }
+  .auth-button {
+    width: 92%;
+  }
+}
