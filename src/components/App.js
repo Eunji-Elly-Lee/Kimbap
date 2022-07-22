@@ -11,6 +11,9 @@ import Footer from 'components/Footer';
 
 function App() {
   const [userObj, setUserObj] = useState(null);
+  const logOut = () => {
+    setUserObj(null);
+  };
   useEffect(() => {
     authService.onAuthStateChanged((user) => {
       if (user) {
@@ -22,7 +25,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Header user={userObj} />
+        <Header user={userObj} logOut={logOut} />
         <Routes>
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
           <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth user={userObj} />} />
