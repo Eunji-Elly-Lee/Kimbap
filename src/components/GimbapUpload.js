@@ -78,7 +78,7 @@ function GimbapUpload() {
           <Form.Label column sm="2">Name:</Form.Label>
           <Col>
             <Form.Control type="text" name="gimbapName"
-              value={gimbap.gimbap} onChange={onChange} />
+              value={gimbap.gimbapName} onChange={onChange} />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="my-1">
@@ -91,7 +91,7 @@ function GimbapUpload() {
         <Form.Group as={Row} className="my-1">
           <Form.Label column sm="2">Price:</Form.Label>
           <Col>
-            <Form.Control type="number" name="price"
+            <Form.Control type="number" name="price" step="0.01" min="0"
               value={gimbap.price} onChange={onChange} />
           </Col>
         </Form.Group>
