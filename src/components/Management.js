@@ -40,7 +40,7 @@ function Management() {
       ))}
       <h4>Locations</h4>
       {locations.map(location => (
-        <ManageLocation key={location.id} location={location.location} />
+        <ManageLocation key={location.id} location={location} />
       ))}
     </div>
   );
