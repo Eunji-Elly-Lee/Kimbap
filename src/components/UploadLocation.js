@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { dbService } from 'fbase';
 import { Form, Row, Col, Button, Spinner } from 'react-bootstrap';
 
-function LocationUpload() {
+function UploadLocation() {
   const [location, setLocation] = useState("");
   const [uploading, setUploading] = useState(false);
   const onSubmit = async (event) => {
@@ -45,4 +45,4 @@ function LocationUpload() {
   );
 }
 
-export default LocationUpload;
+export default UploadLocation;
