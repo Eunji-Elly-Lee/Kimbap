@@ -19,7 +19,7 @@ function ManageGimbap({ gimbap }) {
       <Form.Group>
         <div>
           {gimbap.gimbapName} &nbsp;
-          <CurrencyFormat value={ gimbap.price} displayType="text"
+          <CurrencyFormat value={gimbap.price} displayType="text"
             decimalScale={2} prefix="$ " thousandSeparator />
           <Button type="submit" className="ms-3">Delete</Button>
         </div>
