@@ -1,40 +1,22 @@
-import { Form } from 'react-bootstrap';
-import 'components/Gimbap.css';
+import CurrencyFormat from 'react-currency-format';
+import PropTypes from 'prop-types';
 
-function Gimbap() {
+function Gimbap({ gimbap }) {
   return (
-    <div className="mb-4">
-      <h4>Gimbaps</h4>
-      <Form.Group className="mt-3">
-        <div className="d-flex">
-          <Form.Check type="checkbox" id="gimbap01" />
-          <Form.Label htmlFor="gimbap01" className="ms-2">
-            Gimbpa01
-          </Form.Label>
-          <Form.Label className="mx-2">
-            $ 5.00
-          </Form.Label>
-          <Form.Control type="number" className="nums" />
-        </div>
-        <img src="./logo192.png" alt="gimbap01" />
-        <p>Ingredient01, Ingredient02, Ingredient03, Ingredient04</p>
-      </Form.Group>
-      <Form.Group className="mt-3">
-        <div className="d-flex">
-          <Form.Check type="checkbox" id="gimbap02" />
-          <Form.Label htmlFor="gimbap02" className="ms-2">
-            Gimbpa02
-          </Form.Label>
-          <Form.Label className="mx-2">
-            $ 5.00
-          </Form.Label>
-          <Form.Control type="number" className="nums" />
-        </div>
-        <img src="./logo192.png" alt="gimbap02" />
-        <p>Ingredient01, Ingredient02, Ingredient03, Ingredient04</p>
-      </Form.Group>
+    <div>
+      <div>
+        {gimbap.gimbapName} &nbsp;
+        <CurrencyFormat value={gimbap.price} displayType="text"
+          decimalScale={2} prefix="$ " thousandSeparator />
+      </div>
+      <img src={gimbap.imageUrl} alt="gimbap" className="gimbapImg mt-2" />
+      <p>{gimbap.ingredients}</p>
     </div>
   );
 }
+
+Gimbap.propTypes = {
+  gimbap: PropTypes.object
+};
 
 export default Gimbap;
