@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
-import { dbService, authService } from 'fbase';
+import { dbService } from 'fbase';
 import PropTypes from 'prop-types';
 import UploadGimbap from 'components/UploadGimbap';
 import UploadLocation from 'components/UploadLocation';
 import ManageGimbap from 'components/ManageGimbap';
 import ManageLocation from 'components/ManageLocation';
+import Gimbap from 'components/Gimbap';
 import 'routes/Menu.css';
 
 function Menu({ user }) {
   const [gimbaps, setGimbaps] = useState([]);
   const [locations, setLocations] = useState([]);
   useEffect(() => {
-    const unsubscribeGimbap = dbService.collection("gimbaps")
-      .orderBy("price")
+    dbService.collection("gimbaps").orderBy("price")
       .onSnapshot(snapshot => {
         const gimbapArray = snapshot.docs.map(doc => ({
           id: doc.id,
@@ -20,19 +20,12 @@ function Menu({ user }) {
       }));
       setGimbaps(gimbapArray);
     });
-    const unsubscribeLocation = dbService.collection("locations")
-      .onSnapshot(snapshot => {
-        const locationArray = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-      }));
+    dbService.collection("locations").onSnapshot(snapshot => {
+      const locationArray = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+    }));
       setLocations(locationArray);
-    });
-    authService.onAuthStateChanged((user) => {
-      if (user == null) {
-        unsubscribeGimbap();
-        unsubscribeLocation();
-      }
     });
   }, []);
 
@@ -57,7 +50,14 @@ function Menu({ user }) {
         (user ? (
           <></>
         ) : (
-          <></>
+          <>
+          <div className="mb-3 text-center">
+            <h4>Sign in to place an order for pick up</h4>
+          </div>
+          {gimbaps.map(gimbap => (
+            <Gimbap key={gimbap.id} gimbap={gimbap} />
+          ))}
+          </>
         ))
       )}
     </div>
