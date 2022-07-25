@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { storageService, dbService } from 'fbase';
 import { Form, Row, Col, Button, Spinner } from 'react-bootstrap';
-import 'components/GimbapUpload.css';
+import 'components/UploadGimbap.css';
 
-function GimbapUpload() {
+function UploadGimbap() {
   const initGimbap = {
     gimbapName: "",
     ingredients: "",
@@ -110,4 +110,4 @@ function GimbapUpload() {
   );
 }
 
-export default GimbapUpload;
+export default UploadGimbap;
