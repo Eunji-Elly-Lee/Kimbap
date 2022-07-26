@@ -50,7 +50,7 @@ function SignInForm() {
               value={email} onChange={(event) => setEmail(event.target.value)} />
           </Col>
         </Form.Group>
-        <Button type="submit" variant="dark" disabled={sendingEmail}
+        <Button type="submit" disabled={sendingEmail}
           className="signIn-button mt-5 d-block">
           {sendingEmail ? (
             <>

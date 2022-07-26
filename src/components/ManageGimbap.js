@@ -23,7 +23,7 @@ function ManageGimbap({ gimbap }) {
             decimalScale={2} prefix="$ " thousandSeparator />
           <Button type="submit" className="ms-3">Delete</Button>
         </div>
-        <img src={gimbap.imageUrl} alt="gimbap" className="gimbapImg mt-2" />
+        <img src={gimbap.imageUrl} alt="gimbap" className="manage-gimbap-image mt-2" />
         <p>{gimbap.ingredients}</p>
       </Form.Group>
     </Form>

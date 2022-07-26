@@ -95,8 +95,7 @@ function UploadGimbap() {
               value={gimbap.price} onChange={onChange} />
           </Col>
         </Form.Group>
-        <Button type="submit" variant="dark" disabled={uploading}
-          className="w-100 mt-3">
+        <Button type="submit" disabled={uploading} className="w-100 mt-3">
           {uploading ? (
             <>
             <Spinner as="span" animation="border" size="sm"

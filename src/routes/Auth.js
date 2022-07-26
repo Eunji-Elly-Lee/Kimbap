@@ -64,7 +64,7 @@ function Auth() {
               value={email} onChange={(event) => setEmail(event.target.value)} />
           </Col>
         </Form.Group>
-        <Button type="submit" variant="dark" disabled={submittingEmail}
+        <Button type="submit" disabled={submittingEmail}
           className="auth-button mt-5 d-block">
           {submittingEmail ? (
             <>
