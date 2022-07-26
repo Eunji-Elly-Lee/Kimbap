@@ -4,16 +4,26 @@ import { Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 function ManageLocation({ location }) {
+  const [message, setMessage] = useState("");
   const [editing, setEditing] = useState(false);
   const [newLocation, setNewLocation] = useState(location.location);
   const onSubmit = async (event) => {
     event.preventDefault();
-    await dbService.doc(`locations/${location.id}`).update({
-      location: newLocation
-    });
-    setEditing(false);
+    if (newLocation === "") {
+      setMessage("Please fill in this field!");
+    } else {
+      await dbService.doc(`locations/${location.id}`).update({
+        location: newLocation
+      });
+      setMessage("");
+      setEditing(false);
+    }
   };
-  const toggleEditing = () => setEditing((prev) => !prev);
+  const toggleEditing = () => {
+    setMessage("");
+    setEditing((prev) => !prev);
+    setNewLocation(location.location);
+  };
   const onDeleteClick = async () => {
     const ok = window.confirm("Are you sure you want to delete this?");
     if (ok) {
@@ -23,6 +33,7 @@ function ManageLocation({ location }) {
 
   return (
     <div className="mt-2">
+      {message}
       {editing? (
         <Form onSubmit={onSubmit}>
           <Form.Group>
