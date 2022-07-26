@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { firebaseInstance, authService } from 'fbase';
 import { Button } from 'react-bootstrap';
+import { FcGoogle } from "react-icons/fc";
 import 'components/SocialSignIn.css';
 
 function SocialSignIn() {
@@ -27,7 +28,7 @@ function SocialSignIn() {
     <div>
       <Button type="submit" onClick={onClick}
         className="social-button mt-5 d-block">
-        Continue with Google
+        <FcGoogle className="mb-1" /> Continue with Google
       </Button>
       <div className="social-error mt-3 text-center">{message}</div>
     </div>
