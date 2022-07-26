@@ -5,6 +5,7 @@ import UploadGimbap from 'components/UploadGimbap';
 import UploadLocation from 'components/UploadLocation';
 import ManageGimbap from 'components/ManageGimbap';
 import ManageLocation from 'components/ManageLocation';
+import OrderGimbap from 'components/OrderGimbap';
 import Gimbap from 'components/Gimbap';
 import 'routes/Menu.css';
 
@@ -48,7 +49,7 @@ function Menu({ user }) {
         </>
       ) : (
         (user ? (
-          <></>
+          <OrderGimbap gimbaps={gimbaps} locations={locations} />
         ) : (
           <>
           <div className="mb-3 text-center">
