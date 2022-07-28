@@ -1,12 +1,12 @@
 import { useStateValue } from 'StateProvider';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Form } from 'react-bootstrap';
 import CurrencyFormat from 'react-currency-format';
 import PropTypes from 'prop-types';
 import 'components/OrderGimbapForm.css';
 
 function OrderGimbapForm({ gimbap }) {
-  const [ , dispatch] = useStateValue();
+  const [state, dispatch] = useStateValue();
   const [checked, setChecked] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const onCheckChange = (event) => {
@@ -26,7 +26,7 @@ function OrderGimbapForm({ gimbap }) {
         name: gimbap.gimbapName
       });
       setChecked(false);
-    };
+    }
   };
   const onPriceChange = (event) => {
     const { value } = event.target;
@@ -37,11 +37,21 @@ function OrderGimbapForm({ gimbap }) {
     });
     setQuantity(value);
   };
+  useEffect(() => {
+    if (state.basket.length !== 0) {
+      state.basket.forEach((element) => {
+        if (element.name === gimbap.gimbapName) {
+          setChecked(true);
+          setQuantity(element.quantity);
+        }
+      });
+    }
+  }, [state, gimbap]);
 
   return (
     <Form.Group>
       <div className="d-flex">
-        <Form.Check type="checkbox" id={gimbap.gimbapName}
+        <Form.Check type="checkbox" id={gimbap.gimbapName} checked={checked}
           name="gimbaps" onChange={onCheckChange} />
         <Form.Label htmlFor={gimbap.gimbapName} className="ms-2">
           {gimbap.gimbapName}
