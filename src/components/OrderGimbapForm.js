@@ -1,3 +1,4 @@
+import { useStateValue } from 'StateProvider';
 import { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import CurrencyFormat from 'react-currency-format';
@@ -5,21 +6,43 @@ import PropTypes from 'prop-types';
 import 'components/OrderGimbapForm.css';
 
 function OrderGimbapForm({ gimbap }) {
+  const [ , dispatch] = useStateValue();
   const [checked, setChecked] = useState(false);
-  const [amount, setAmount] = useState(1);
-  const onChange = (event) => {
+  const [quantity, setQuantity] = useState(1);
+  const onCheckChange = (event) => {
     if (event.target.checked) {
+      dispatch({
+        type:"ADD_TO_BASKET",
+        gimbap: {
+          name: gimbap.gimbapName,
+          price: gimbap.price,
+          quantity: quantity
+        }
+      });
       setChecked(true);
     } else {
+      dispatch({
+        type:"REMOVE_FROM_BASKET",
+        name: gimbap.gimbapName
+      });
       setChecked(false);
     };
+  };
+  const onPriceChange = (event) => {
+    const { value } = event.target;
+    dispatch({
+      type:"UPDATE_QUANTITY",
+      name: gimbap.gimbapName,
+      quantity: value
+    });
+    setQuantity(value);
   };
 
   return (
     <Form.Group>
       <div className="d-flex">
         <Form.Check type="checkbox" id={gimbap.gimbapName}
-          name="gimbaps" onChange={onChange} />
+          name="gimbaps" onChange={onCheckChange} />
         <Form.Label htmlFor={gimbap.gimbapName} className="ms-2">
           {gimbap.gimbapName}
         </Form.Label>
@@ -28,8 +51,8 @@ function OrderGimbapForm({ gimbap }) {
             decimalScale={2} prefix="$ " thousandSeparator />
         </Form.Label>
         <Form.Control type="number" step={1} min={1}
-          disabled={!checked} className="number-input" value={amount}
-          onChange={(event) => setAmount(event.target.value)} />
+          disabled={!checked} className="number-input" value={quantity}
+          onChange={onPriceChange} />
       </div>
       <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-form-image" />
       <p>{gimbap.ingredients}</p>
