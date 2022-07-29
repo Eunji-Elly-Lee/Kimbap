@@ -6,6 +6,7 @@ import Home from 'routes/Home';
 import Auth from 'routes/Auth';
 import SignIn from 'routes/SignIn';
 import Menu from 'routes/Menu';
+import Order from 'routes/Order';
 import Orders from 'routes/Orders';
 import Footer from 'components/Footer';
 
@@ -31,6 +32,7 @@ function App() {
           <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
           <Route basename={process.env.PUBLIC_URL} path="/signin" element={<SignIn user={userObj} />} />
           <Route basename={process.env.PUBLIC_URL} path="/menu" element={<Menu user={userObj} />} />
+          <Route basename={process.env.PUBLIC_URL} path="/order" element={<Order user={userObj} />} />
           <Route basename={process.env.PUBLIC_URL} path="/orders" element={<Orders user={userObj} />} />
         </Routes>
         <Footer />
