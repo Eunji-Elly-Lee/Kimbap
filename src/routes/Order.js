@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import PropTypes from 'prop-types';
-import OrderForm from 'components/OrderForm';
+import Payment from 'components/Payment';
 import 'routes/Order.css';
 
 function Order({ user }) {
@@ -13,7 +13,7 @@ function Order({ user }) {
   return (
     <div className="order mx-auto mt-4">
       <Elements stripe={stripePromise}>
-        <OrderForm user={user} />
+        <Payment user={user} />
       </Elements>
     </div>
   );
