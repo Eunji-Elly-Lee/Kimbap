@@ -11,7 +11,7 @@ function Order({ user }) {
   );
 
   return (
-    <div className="order mx-auto mt-4">
+    <div className="order">
       <Elements stripe={stripePromise}>
         <Payment user={user} />
       </Elements>
