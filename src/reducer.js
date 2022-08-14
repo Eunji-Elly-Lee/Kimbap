@@ -49,7 +49,7 @@ const reducer = (state, action) => {
     case "EMPTY_BASKET":
       return {
         ...state,
-        gimbap: [],
+        basket: [],
         location: ""
       };
 
