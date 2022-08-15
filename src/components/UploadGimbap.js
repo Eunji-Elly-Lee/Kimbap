@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { storageService, dbService } from 'fbase';
 import { Form, Row, Col, Button, Spinner } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import 'components/UploadGimbap.css';
 
-function UploadGimbap() {
+function UploadGimbap({ gimbaps }) {
   const initGimbap = {
     gimbapName: "",
     ingredients: "",
@@ -17,24 +18,29 @@ function UploadGimbap() {
     event.preventDefault();
     if (imageFile !== "" && gimbap.gimbapName !== "" &&
       gimbap.ingredients !== "" && gimbap.price !== 0) {
-        setUploading(true);
-        let imageUrlRef = "";
-        const imageFileRef = storageService.ref().child(`${gimbap.gimbapName}`);
-        const response = await imageFileRef.putString(imageFile, "data_url");
-        imageUrlRef = await response.ref.getDownloadURL();
-        const newGimbap = {
-          gimbapName: gimbap.gimbapName,
-          imageUrl: imageUrlRef,
-          ingredients: gimbap.ingredients,
-          price: gimbap.price
-        };
-        await dbService.collection("gimbaps").add(newGimbap)
-          .then(() => {
-            setGimbap(initGimbap);
-            setImageFile("");
-            setMessage("");
-            setUploading(false);
-          });
+        const checkGimbap = gimbaps.findIndex((x) => x.gimbapName === gimbap.gimbapName);
+        if (checkGimbap < 0) {
+          setUploading(true);
+          let imageUrlRef = "";
+          const imageFileRef = storageService.ref().child(`${gimbap.gimbapName}`);
+          const response = await imageFileRef.putString(imageFile, "data_url");
+          imageUrlRef = await response.ref.getDownloadURL();
+          const newGimbap = {
+            gimbapName: gimbap.gimbapName,
+            imageUrl: imageUrlRef,
+            ingredients: gimbap.ingredients,
+            price: gimbap.price
+          };
+          await dbService.collection("gimbaps").add(newGimbap)
+            .then(() => {
+              setGimbap(initGimbap);
+              setImageFile("");
+              setMessage("");
+              setUploading(false);
+            });
+        } else {
+          setMessage(gimbap.gimbapName + " already exists. Please upload another one!");
+        }
     } else {
       setMessage("Please fill in all fields!");
     }
@@ -108,5 +114,9 @@ function UploadGimbap() {
     </div>
   );
 }
+
+UploadGimbap.propTypes = {
+  gimbaps: PropTypes.array
+};
 
 export default UploadGimbap;
