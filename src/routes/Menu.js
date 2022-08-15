@@ -34,7 +34,7 @@ function Menu({ user }) {
     <div className="menu mx-auto mt-4">
       {(user && user.email === "lizyduck@gmail.com") ? (
         <>
-        <UploadGimbap />
+        <UploadGimbap gimbaps={gimbaps} />
         <UploadLocation />
         <div className="mt-4">
           <h4>Gimbaps</h4>
