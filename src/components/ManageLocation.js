@@ -12,11 +12,16 @@ function ManageLocation({ location }) {
     if (newLocation === "") {
       setMessage("Please fill in this field!");
     } else {
-      await dbService.doc(`locations/${location.id}`).update({
-        location: newLocation
-      });
-      setMessage("");
-      setEditing(false);
+      const regExp = /^\d{4}\.\d{2}\.\d{2}\s[\w.:-\s]+$/;
+      if (regExp.test(newLocation)) {
+        await dbService.doc(`locations/${location.id}`).update({
+          location: newLocation
+        });
+        setMessage("");
+        setEditing(false);
+      } else {
+        setMessage("Please enter according to pattern!");
+      }
     }
   };
   const toggleEditing = () => {
