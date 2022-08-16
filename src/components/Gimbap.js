@@ -6,11 +6,13 @@ function Gimbap({ gimbap }) {
   return (
     <div>
       <div>
-        {gimbap.gimbapName} &nbsp;
+        <strong>{gimbap.gimbapName}</strong> &nbsp;
         <CurrencyFormat value={gimbap.price} displayType="text"
           decimalScale={2} prefix="$ " thousandSeparator />
       </div>
-      <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-image mt-2" />
+      <div className="gimbap-image-wrapper position-relative my-3">
+        <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-image" />
+      </div>
       <p>{gimbap.ingredients}</p>
     </div>
   );
