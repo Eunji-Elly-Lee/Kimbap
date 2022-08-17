@@ -54,7 +54,7 @@ function OrderGimbapForm({ gimbap }) {
         <Form.Check type="checkbox" id={gimbap.gimbapName} checked={checked}
           name="gimbaps" onChange={onCheckChange} />
         <Form.Label htmlFor={gimbap.gimbapName} className="ms-2">
-          {gimbap.gimbapName}
+          <strong>{gimbap.gimbapName}</strong>
         </Form.Label>
         <Form.Label className="mx-2">
           <CurrencyFormat value={gimbap.price} displayType="text"
@@ -64,7 +64,9 @@ function OrderGimbapForm({ gimbap }) {
           disabled={!checked} className="number-input" value={quantity}
           onChange={onPriceChange} />
       </div>
-      <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-form-image" />
+      <div className="gimbap-form-image-wrapper position-relative my-3">
+        <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-form-image" />
+      </div>
       <p>{gimbap.ingredients}</p>
     </Form.Group>
   );
