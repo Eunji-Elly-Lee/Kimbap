@@ -18,12 +18,14 @@ function ManageGimbap({ gimbap }) {
     <Form onSubmit={onSubmit}>
       <Form.Group>
         <div>
-          {gimbap.gimbapName} &nbsp;
+          <strong>{gimbap.gimbapName}</strong> &nbsp;
           <CurrencyFormat value={gimbap.price} displayType="text"
             decimalScale={2} prefix="$ " thousandSeparator />
           <Button type="submit" className="ms-3">Delete</Button>
         </div>
-        <img src={gimbap.imageUrl} alt="gimbap" className="manage-gimbap-image mt-2" />
+        <div className="manage-gimbap-image-wrapper position-relative my-3">
+          <img src={gimbap.imageUrl} alt="gimbap" className="manage-gimbap-image" />
+        </div>
         <p>{gimbap.ingredients}</p>
       </Form.Group>
     </Form>
