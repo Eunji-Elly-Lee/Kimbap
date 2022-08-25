@@ -11,6 +11,11 @@ body {
 a {
   text-decoration: none;
 }
+ul, li {
+  padding: 0;
+  display: inline;
+  list-style: none;
+}
 input[type="text"],
 input[type="email"],
 input[type="number"],
