@@ -21,7 +21,8 @@ function Menu({ user }) {
       }));
       setGimbaps(gimbapArray);
     });
-    dbService.collection("locations").onSnapshot(snapshot => {
+    dbService.collection("locations").orderBy("location")
+    .onSnapshot(snapshot => {
       const locationArray = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
@@ -32,7 +33,7 @@ function Menu({ user }) {
 
   return (
     <div className="menu mx-auto mt-4">
-      {(user && user.email === "lizyduck@gmail.com") ? (
+      {(user && user.email === "ellylee2020@gmail.com") ? (
         <>
         <UploadGimbap gimbaps={gimbaps} />
         <UploadLocation />
