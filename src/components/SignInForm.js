@@ -16,7 +16,7 @@ function SignInForm() {
     try {
       setSendingEmail(true);
       const actionCodeSettings = {
-        url: "http://localhost:3000/auth",
+        url: process.env.REACT_APP_SIGN_IN_URL,
         handleCodeInApp: true
       };
       await authService.sendSignInLinkToEmail(email, actionCodeSettings)
