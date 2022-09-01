@@ -26,6 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://elly-gimbap.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
