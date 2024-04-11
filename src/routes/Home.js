@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'routes/Home.css';
 
-function Home() {
+function Home({ user }) {
   return (
     <div className="home">
       <Container>
@@ -14,13 +14,15 @@ function Home() {
               <span className="w-100 text-white fs-2">Menu</span>
             </Link>
           </Col>
-          <Col xs="5" sm="4" md="3"
-            className="main-menu m-5 m-sm-2 mt-sm-5 position-relative">
-            <Link to="/orders"
-              className="w-100 h-100 d-flex align-items-center text-center">
-              <span className="w-100 text-white fs-2">Orders</span>
-            </Link>
-          </Col>
+          {user && (
+            <Col xs="5" sm="4" md="3"
+              className="main-menu m-5 m-sm-2 mt-sm-5 position-relative">
+              <Link to="/orders"
+                className="w-100 h-100 d-flex align-items-center text-center">
+                <span className="w-100 text-white fs-2">Orders</span>
+              </Link>
+            </Col>
+          )}
         </Row>
       </Container>
     </div>

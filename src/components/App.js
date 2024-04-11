@@ -34,7 +34,7 @@ function App() {
           <img className="opacity-75 w-100" src="./assets/gimbap_bg.jpg" alt="background gimbap" />
         </div>
         <Routes>
-          <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+          <Route path={`${process.env.PUBLIC_URL}/`} element={<Home user={userObj} />} />
           <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
           <Route basename={process.env.PUBLIC_URL} path="/signin" element={<SignIn user={userObj} />} />
           <Route basename={process.env.PUBLIC_URL} path="/menu" element={<Menu user={userObj} />} />
