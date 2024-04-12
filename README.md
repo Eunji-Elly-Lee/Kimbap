@@ -8,7 +8,7 @@
 
 This web application provides a convenient platform for ordering delicious Kimbap, a popular Korean seaweed rice roll, for pick-up.
 
-#### [View Application](https://elly-gimbap.netlify.app/)
+#### [View Application](https://elly-kimbap.netlify.app/)
 
 ### Ordering System
 
@@ -50,6 +50,6 @@ This application is built with a powerful combination of technologies:
 
 **Order Your Kimbap Today!**
 
-Visit the live application at: [View Application](https://elly-gimbap.netlify.app/)
+Visit the live application at: [View Application](https://elly-kimbap.netlify.app/)
 
 Feel free to reach out with any questions or feedback!
