@@ -1,10 +1,10 @@
 ## Online Kimbap Ordering System
 
-![main page](/images/screenshot_main.png)
-![order page](/images/screenshot_order01.png)
-![order page](/images/screenshot_order02.png)
-![history page](/images/screenshot_order_history.png)
-![management page](/images/screenshot_management.png)
+![main page](/images/main_page.png)
+![order page](/images/menu_page.png)
+![order page](/images/payment_page.png)
+![history page](/images/history_page.png)
+![management page](/images/management_page.png)
 
 This web application provides a convenient platform for ordering delicious Kimbap, a popular Korean seaweed rice roll, for pick-up.
 
