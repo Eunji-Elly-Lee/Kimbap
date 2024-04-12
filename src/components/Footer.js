@@ -16,8 +16,8 @@ function Footer() {
         <Row xs="auto" className="mx-2 justify-content-center">
           <Col>
             Mail:&nbsp;
-            <a className="text-white" href="mailto:eunji.lee@edu.sait.ca">
-              eunji.lee@edu.sait.ca
+            <a className="text-white" href="mailto:ellylee2020@gmail.com">
+              ellylee2020@gmail.com
             </a>
           </Col>
           <Col>
@@ -26,7 +26,7 @@ function Footer() {
         </Row>
         <Row className="py-4">
           <Col>
-            &copy; 2022 Gimbap
+            &copy; 2022 Kimbap
           </Col>
         </Row>
       </Container>
