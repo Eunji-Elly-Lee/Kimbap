@@ -1,16 +1,20 @@
 .home {
-  margin: 5vh 0 9vh;
+  min-height: 75vh;
+  margin-top: 70px;
 }
+
 .main-menu {
-  max-width: 300px;
-  background-color: black;
-  font-weight:500;
+  max-width: 250px;
+  margin: 0 10vw 15vh;
+  font-weight: 500;
 }
+
 .main-menu::after {
   content: '';
   display: block;
   padding-bottom: 100%;
 }
+
 .main-menu::before {
   position: absolute;
   content: '';
@@ -21,10 +25,4 @@
   z-index: -1;
   inset: 0;
   transform: rotate(7deg);
-}
-
-@media screen and (min-width:576px) {
-  .home {
-    margin: 13vh 0 28vh;
-  }
 }
