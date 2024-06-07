@@ -1,6 +1,7 @@
 .background-wrapper {
-  bottom: 8%;
-  right: -3%;
+  max-width: 800px;
+  bottom: 9%;
+  right: 4%;
   z-index: -1;
   transform: rotate(165deg);
 }
