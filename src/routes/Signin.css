@@ -1,41 +1,5 @@
 .signIn {
-  width: 80%;
-  margin: 12vh auto 30vh;
-}
-
-@media screen and (min-width:380px) {
-  .signIn {
-    margin-top: 18vh;
-  }
-}
-
-@media screen and (min-width:576px) {
-  .signIn {
-    width: 70%;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .signIn {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width:992px) {
-  .signIn {
-    width: 45%;
-    margin-bottom: 36vh;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .signIn {
-    width: 43%;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  .signIn {
-    width: 40%;
-  }
+  max-width: 600px;
+  min-height: 75vh;
+  margin: 0 auto 70px;
 }
