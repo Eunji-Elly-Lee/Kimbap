@@ -1,55 +1,62 @@
-## Online Kimbap Ordering System
+# Online Kimbap Ordering System
 
-![main page](/images/main_page.png)
-![order page](/images/menu_page.png)
-![order page](/images/payment_page.png)
-![history page](/images/history_page.png)
-![management page](/images/management_page.png)
+A responsive web application for placing and managing Kimbap pick-up orders. <br />
+Built with React, Node.js, Firebase, and Stripe.
 
-This web application provides a convenient platform for ordering delicious Kimbap, a popular Korean seaweed rice roll, for pick-up.
+사용자가 원하는 김밥 메뉴, 수령 장소, 시간을 선택해 주문할 수 있는 웹 애플리케이션입니다. <br />
+React, Node.js, Firebase, Stripe로 구현되었습니다.
 
-#### [View Application](https://elly-kimbap.netlify.app/)
+🔗 [Live Demo](https://elly-kimbap.netlify.app/)
 
-### Ordering System
+## 💡 Overview
 
-**Hungry customers** can easily place orders for pick-up via our user-friendly interface. With a variety of Kimbap options available, satisfaction is guaranteed! Payment is hassle-free, with only card payments accepted for a smooth transaction process.
+Users can place pick-up orders by selecting Kimbap items, location, and time. <br />
+Admins manage menu and logistics. Stripe ensures secure payments.
 
-### Inventory and Location Management
+사용자는 김밥 메뉴, 수령 장소, 시간을 선택하여 주문할 수 있고, 관리자는 메뉴와 수령 장소 및 시간을 관리할 수 있습니다. <br />
+Stripe를 통해 안전한 결제가 이루어집니다.
 
-**Admins** have the power to manage photos, ingredients, and pick-up locations with ease. From uploading new Kimbap variations to modifying existing ones, maintaining an updated inventory has never been simpler. Location management ensures smooth logistics for order pick-ups.
+## 👤 User Features
 
-### Features
+- Browse Kimbap menu with images and ingredients <br />
+  김밥 이미지 및 재료 정보 확인
+- Select pick-up location & time <br />
+  수령 장소 및 시간 선택
+- Place and pay for orders via Stripe <br />
+  Stripe를 통한 주문 및 결제
+- View order history with pagination <br />
+  페이지네이션 기능이 있는 주문 이력 보기
+- Login via email link or Google <br />
+  이메일 링크 또는 구글 로그인 기능
 
-- **Visually Appealing Design**: A sleek black and white color scheme, for a smooth and intuitive ordering experience
-- **Intuitive UI/UX**: A simple and easy-to-navigate interface, making ordering a breeze
-- **Fully Responsive**: Ensures a smooth experience on desktops, tablets, and smartphones
-- **Order History Pagination**: Easily manages past orders with clear pagination for extensive order lists
-- **Secure Login Options**: Uses either an email link or a Google account, providing both convenience and robust security measures
-- **Simple and Secure Payment**: Seamlessly integrates with Stripe, allowing for secure and reliable card payments for orders
+## 🛠 Admin Features
 
-### Technologies Used
+- Upload & manage Kimbap items <br />
+  김밥 메뉴 등록 및 관리
+- Set pick-up time slots and locations <br />
+  수령 시간대 및 장소 설정
+- Monitor orders and update menu <br />
+  주문 내역 확인 및 메뉴 수정
 
-This application is built with a powerful combination of technologies:
+## 🖼 Screenshots
 
-**Front-End**:
+<details>
+<summary>Click to view</summary>
 
-- React.js and JavaScript: Powering the dynamic user interface
-- HTML, CSS, and Bootstrap: Ensuring a visually appealing and responsive design
+![Main Page](/images/main_page.png)
+![Order Page](/images/menu_page.png)
+![Payment Page](/images/payment_page.png)
+![Order History](/images/history_page.png)
+![Admin Management](/images/management_page.png)
 
-**Back-End**:
+</details>
 
-- Node.js and Express.js: Handling server-side logic and API endpoints
-- Firebase: Managing authentication and flexible and scalable data storage
-- Stripe: Facilitating secure card payments for orders
+## 🧰 Tech Stack
 
-**Deployment**:
-
-- Netlify: Hosting the application for seamless accessibility
-
-<br />
-
-**Order Your Kimbap Today!**
-
-Visit the live application at: [View Application](https://elly-kimbap.netlify.app/)
-
-Feel free to reach out with any questions or feedback!
+| Category   | Tech                |
+| ---------- | ------------------- |
+| Frontend   | React.js, Bootstrap |
+| Backend    | Node.js, Express.js |
+| Auth & DB  | Firebase            |
+| Payment    | Stripe              |
+| Deployment | Netlify             |
