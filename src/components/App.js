@@ -14,16 +14,25 @@ import 'components/App.css';
 
 function App() {
   const [userObj, setUserObj] = useState(null);
+  const [authReady, setAuthReady] = useState(false);
   const logOut = () => {
     setUserObj(null);
   };
   useEffect(() => {
-    authService.onAuthStateChanged((user) => {
-      if (user) {
-        setUserObj(user);
-      }
+    const unsub = authService.onAuthStateChanged((user) => {
+      setUserObj(user ?? null);
+      setAuthReady(true);
     });
+    return () => unsub();
   }, []);
+
+  if (!authReady) {
+    return (
+      <div className="auth-loading d-flex justify-content-center align-items-center fs-5">
+        Loading…
+      </div>
+    );
+  }
 
   return (
     <div className="position-relative">
