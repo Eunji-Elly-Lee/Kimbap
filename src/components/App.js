@@ -35,13 +35,10 @@ function App() {
   }
 
   return (
-    <div className="position-relative">
+    <div className="site-bg position-relative">
       <Router>
         <ScrollToTop />
         <Header user={userObj} logOut={logOut} />
-        <div className="background-wrapper position-absolute w-50 d-none d-lg-block">
-          <img className="opacity-75 w-100" src="./assets/gimbap_bg.jpg" alt="background gimbap" />
-        </div>
         <Routes>
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Home user={userObj} />} />
           <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
