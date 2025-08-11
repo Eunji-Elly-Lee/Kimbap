@@ -35,19 +35,23 @@ function App() {
   }
 
   return (
-    <div className="site-bg position-relative">
+    <div className="site-bg">
       <Router>
         <ScrollToTop />
-        <Header user={userObj} logOut={logOut} />
-        <Routes>
-          <Route path={`${process.env.PUBLIC_URL}/`} element={<Home user={userObj} />} />
-          <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
-          <Route basename={process.env.PUBLIC_URL} path="/signin" element={<SignIn user={userObj} />} />
-          <Route basename={process.env.PUBLIC_URL} path="/menu" element={<Menu user={userObj} />} />
-          <Route basename={process.env.PUBLIC_URL} path="/order" element={<Order user={userObj} />} />
-          <Route basename={process.env.PUBLIC_URL} path="/orders" element={<Orders user={userObj} />} />
-        </Routes>
-        <Footer />
+        <div className="d-flex flex-column min-vh-100">
+          <Header user={userObj} logOut={logOut} />
+          <main className="flex-grow-1">
+            <Routes>
+              <Route path={`${process.env.PUBLIC_URL}/`} element={<Home user={userObj} />} />
+              <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
+              <Route basename={process.env.PUBLIC_URL} path="/signin" element={<SignIn user={userObj} />} />
+              <Route basename={process.env.PUBLIC_URL} path="/menu" element={<Menu user={userObj} />} />
+              <Route basename={process.env.PUBLIC_URL} path="/order" element={<Order user={userObj} />} />
+              <Route basename={process.env.PUBLIC_URL} path="/orders" element={<Orders user={userObj} />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </Router>
     </div>
   );
