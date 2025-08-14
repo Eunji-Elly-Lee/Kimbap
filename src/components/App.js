@@ -3,6 +3,7 @@ import { authService } from 'fbase';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from 'ScrollToTop';
 import Header from 'components/Header';
+import Loading from './Loading';
 import Home from 'routes/Home';
 import Auth from 'routes/Auth';
 import SignIn from 'routes/SignIn';
@@ -26,14 +27,6 @@ function App() {
     return () => unsub();
   }, []);
 
-  if (!authReady) {
-    return (
-      <div className="auth-loading d-flex justify-content-center align-items-center fs-5">
-        Loading…
-      </div>
-    );
-  }
-
   return (
     <div className="site-bg">
       <Router>
@@ -41,14 +34,18 @@ function App() {
         <div className="d-flex flex-column min-vh-100">
           <Header user={userObj} logOut={logOut} />
           <main className="flex-grow-1">
-            <Routes>
-              <Route path={`${process.env.PUBLIC_URL}/`} element={<Home user={userObj} />} />
-              <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
-              <Route basename={process.env.PUBLIC_URL} path="/signin" element={<SignIn user={userObj} />} />
-              <Route basename={process.env.PUBLIC_URL} path="/menu" element={<Menu user={userObj} />} />
-              <Route basename={process.env.PUBLIC_URL} path="/order" element={<Order user={userObj} />} />
-              <Route basename={process.env.PUBLIC_URL} path="/orders" element={<Orders user={userObj} />} />
-            </Routes>
+            {!authReady ? (
+              <Loading />
+            ) : (
+              <Routes>
+                <Route path={`${process.env.PUBLIC_URL}/`} element={<Home user={userObj} />} />
+                <Route basename={process.env.PUBLIC_URL} path="/auth" element={<Auth />} />
+                <Route basename={process.env.PUBLIC_URL} path="/signin" element={<SignIn user={userObj} />} />
+                <Route basename={process.env.PUBLIC_URL} path="/menu" element={<Menu user={userObj} />} />
+                <Route basename={process.env.PUBLIC_URL} path="/order" element={<Order user={userObj} />} />
+                <Route basename={process.env.PUBLIC_URL} path="/orders" element={<Orders user={userObj} />} />
+              </Routes>
+            )}
           </main>
           <Footer />
         </div>

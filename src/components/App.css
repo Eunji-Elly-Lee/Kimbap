@@ -1,8 +1,3 @@
-.auth-loading {
-  height: 100vh;
-  transform: translateY(-10%);
-}
-
 .site-bg::before {
   content: "";
   position: fixed;
