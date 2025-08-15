@@ -13,35 +13,35 @@ function Header({ user, logOut }) {
   }
 
   return (
-    <div>
+    <header>
       <Container>
         <Row xs="auto" className="mt-1 align-items-center">
-          <Col className={user ? "login-logo p-0" : "logout-logo p-0"}>
-            <Link to="/">
-              <img className="header-logo" src="./assets/logo_black.gif" alt="logo" />
+          <Col className="py-4 px-3">
+            <Link to="/" >
+              <img className="header-logo" src="./assets/logo_black_cropped.png" alt="logo" />
             </Link>
           </Col>
-          {user ? (
-            <>
-            <Col className="header-name p-0">
-              Hi, {user.displayName ? user.displayName : user.email.split('@')[0]}
-            </Col>
-            <Col>
-              <Button variant="outline-dark" onClick={onClick} className="logout rounded-0">
-                Log Out
-              </Button>
-            </Col>
-            </>
-          ) : (
-            <Col className="header-signin p-0">
+          <Col>
+            {user ? (
+              <Row xs="auto" className="ps-2 align-items-center">
+                <Col>
+                  Hi, {user.displayName ? user.displayName : user.email.split('@')[0]}
+                </Col>
+                <Col>
+                  <Button variant="outline-dark" onClick={onClick} className="logout">
+                    Log Out
+                  </Button>
+                </Col>
+              </Row>
+            ) : (
               <Link to="/signin" className="signin position-relative text-dark">
                 Sign In
               </Link>
-            </Col>
-          )}
+            )}
+          </Col>
         </Row>
       </Container>
-    </div>
+    </header>
   );
 }
 
