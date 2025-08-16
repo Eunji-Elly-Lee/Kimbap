@@ -4,7 +4,7 @@ import 'components/Footer.css';
 
 function Footer() {
   return (
-    <div className="pt-4 bg-black">
+    <footer className="pt-4 bg-black">
       <Container className="text-center text-white">
         <Row>
           <Col>
@@ -30,7 +30,7 @@ function Footer() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </footer>
   );
 }
 
