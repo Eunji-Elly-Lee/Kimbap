@@ -1,34 +1,11 @@
 .menu {
-  width: 92%;
+  width: 90%;
+  max-width: 850px;
   margin-bottom: 8vh;
 }
 
 @media screen and (min-width:576px) {
   .menu {
-    width: 83%;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .menu {
-    width: 77%;
-  }
-}
-
-@media screen and (min-width:992px) {
-  .menu {
     width: 70%;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .menu {
-    width: 62%;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  .menu {
-    width: 52%;
   }
 }
