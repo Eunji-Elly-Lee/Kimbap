@@ -1,10 +1,20 @@
 .home {
-  margin: 20vh 0;
+  min-height: 80vh;
+  margin-bottom: 8vh;
+}
+
+.home-logged-in {
+  min-height: 100vh;
+  margin-bottom: 5vh;
+}
+
+.main-menu-wrapper {
+  gap: 50px;
 }
 
 .main-menu {
+  min-width: 160px;
   max-width: 250px;
-  margin: 0 10vw 15vh;
   font-weight: 500;
 }
 
@@ -24,4 +34,26 @@
   z-index: -1;
   inset: 0;
   transform: rotate(7deg);
+}
+
+.intro-text {
+  max-width: 320px;
+  transform: rotate(-7deg);
+}
+
+.intro-text h1 {
+  font-size: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    min-height: calc(100vh - 220px);
+    margin-bottom: 10vh;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper-logged-out {
+    gap: 0px;
+  }
 }
