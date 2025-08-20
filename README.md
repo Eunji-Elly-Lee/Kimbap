@@ -38,6 +38,16 @@ Stripe를 통해 안전한 결제가 이루어집니다.
 - Monitor orders and update menu <br />
   주문 내역 확인 및 메뉴 수정
 
+## 🎨 Design Concept
+
+The UI design concept is based on Kimbap itself — black seaweed and white rice. <br />
+I applied a Black & White minimal style with rectangular elements to reflect this identity. <br />
+Subtle animations and character illustrations were added to bring a playful, friendly touch.
+
+UI 디자인 컨셉은 김밥 그 자체 — 검은 김과 흰 밥에서 영감을 얻었습니다. <br />
+이를 표현하기 위해 블랙 & 화이트의 미니멀 스타일과 직각 요소를 활용했으며, <br />
+부드러운 애니메이션과 캐릭터 일러스트를 더해 친근하고 재미있는 분위기를 만들었습니다.
+
 ## 🖼 Screenshots
 
 <details>
