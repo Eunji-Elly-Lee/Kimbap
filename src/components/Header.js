@@ -24,7 +24,7 @@ function Header({ user, logOut }) {
           <Col>
             {user ? (
               <Row xs="auto" className="ps-2 align-items-center">
-                <Col>
+                <Col className="user-name">
                   Hi, {user.displayName ? user.displayName : user.email.split('@')[0]}
                 </Col>
                 <Col>

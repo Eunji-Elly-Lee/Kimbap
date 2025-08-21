@@ -2,7 +2,12 @@
   width: 155px;
 }
 
+.user-name {
+  font-weight: 500;
+}
+
 .logout {
+  border-width: 1.5px;
   font-weight: 500;
   transition: 0.5s;
 }
