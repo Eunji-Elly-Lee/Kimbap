@@ -11,7 +11,7 @@ function Home({ user }) {
             main-menu-wrapper ${!user ? "wrapper-logged-out" : ""} p-5 justify-content-evenly
           `}
         >
-          <Col md="6" className="main-menu position-relative bg-black">
+          <Col md="6" className="main-menu position-relative bg-black rounded">
             <Link
               to="/menu"
               className="w-100 h-100 d-flex align-items-center text-center"
@@ -20,7 +20,7 @@ function Home({ user }) {
             </Link>
           </Col>
           {user ? (
-            <Col md="6" className="main-menu position-relative bg-black">
+            <Col md="6" className="main-menu position-relative bg-black rounded">
               <Link
                 to="/orders"
                 className="w-100 h-100 d-flex align-items-center text-center"
