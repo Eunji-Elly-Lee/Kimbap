@@ -6,7 +6,7 @@
   content: '';
   display: block;
   width: 250px;
-  border: 1px solid black;
+  border: 1.5px solid black;
   z-index: -1;
   inset: 0;
   transform: rotate(5deg);
