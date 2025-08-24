@@ -35,6 +35,7 @@
   z-index: -1;
   inset: 0;
   transform: rotate(7deg);
+  transition: 0.5s;
 }
 
 .main-menu:hover::before {
