@@ -73,7 +73,7 @@ function Menu({ user }) {
   }
 
   return (
-    <div className="menu mx-auto mt-4">
+    <div className="menu mx-auto mt-5">
       {(user && user.email === "ellylee2020@gmail.com") ? (
         <>
           <UploadGimbap gimbaps={gimbaps} />
