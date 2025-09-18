@@ -50,32 +50,34 @@ function Auth() {
   }, [href, signIn, navigate]);
 
   return (
-    <div className="auth">
-      <div className="auth-message mb-3 text-center">{message}</div>
-      {emailConfirmation && (
-      <Form onSubmit={onSubmit}>
-        <Form.Group as={Row} className="justify-content-center">
-          <Form.Label column xs="1" className="auth-icon text-center">
-            <IoPencilSharp />
-          </Form.Label>
-          <Col xs="10" className="p-0 me-2">
-            <Form.Control type="email" placeholder="Email"
-              className="border-0 border-bottom border-dark"
-              value={email} onChange={(event) => setEmail(event.target.value)} />
-          </Col>
-        </Form.Group>
-        <Button type="submit" disabled={submittingEmail}
-          className="auth-button mt-5 d-block">
-          {submittingEmail ? (
-            <>
-            <Spinner as="span" animation="border" size="sm"
-              role="status" aria-hidden="true" />
-            <span className="visually-hidden">Submitting...</span>
-            </>
-          ) : "Submit"}
-        </Button>
-      </Form>
-      )}
+    <div className="auth d-flex align-items-center mx-auto px-3">
+      <div className="w-100">
+        <div className="mb-3 text-center">{message}</div>
+        {emailConfirmation && (
+          <Form onSubmit={onSubmit}>
+            <Form.Group as={Row} className="w-100 justify-content-center">
+              <Form.Label column xs="2" className="w-auto text-center">
+                <IoPencilSharp />
+              </Form.Label>
+              <Col xs="10" className="w-75 p-0">
+                <Form.Control type="email" placeholder="Email"
+                  className="border-0 border-bottom border-dark"
+                  value={email} onChange={(event) => setEmail(event.target.value)} />
+              </Col>
+            </Form.Group>
+            <Button type="submit" disabled={submittingEmail}
+              className="auth-button mt-5 d-block">
+              {submittingEmail ? (
+                <>
+                  <Spinner as="span" animation="border" size="sm"
+                    role="status" aria-hidden="true" />
+                  <span className="visually-hidden">Submitting...</span>
+                </>
+              ) : "Submit"}
+            </Button>
+          </Form>
+        )}
+      </div>
     </div>
   );
 }
