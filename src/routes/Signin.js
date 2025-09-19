@@ -14,7 +14,7 @@ function SignIn({ user }) {
   }, [user, navigate]);
 
   return (
-    <div className="signIn d-flex align-items-center">
+    <div className="sign-in d-flex align-items-center mx-auto px-3">
       <div className="w-100">
         <SignInForm />
         <SocialSignIn />

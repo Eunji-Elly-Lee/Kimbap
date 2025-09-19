@@ -1,5 +1,5 @@
-.signIn {
-  max-width: 600px;
+.sign-in {
+  max-width: 500px;
   min-height: 75vh;
-  margin: 0 auto 70px;
+  margin-bottom: 10vh;
 }
