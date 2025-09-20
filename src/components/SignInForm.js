@@ -38,20 +38,20 @@ function SignInForm() {
 
   return (
     <div>
-      <div className="signIn-message mb-3 text-center">{message}</div>
+      <div className="mb-3 text-center">{message}</div>
       <Form onSubmit={onSubmit}>
-        <Form.Group as={Row} className="justify-content-center">
-          <Form.Label column xs="1" className="signIn-icon text-center">
+        <Form.Group as={Row} className="w-100 justify-content-center">
+          <Form.Label column xs="2" className="w-auto text-center">
             <IoPersonSharp />
           </Form.Label>
-          <Col xs="10" className="p-0 me-2">
+          <Col xs="10" className="w-75 p-0">
             <Form.Control type="email" placeholder="Email"
               className="border-0 border-bottom border-dark"
               value={email} onChange={(event) => setEmail(event.target.value)} />
           </Col>
         </Form.Group>
         <Button type="submit" disabled={sendingEmail}
-          className="signIn-button mt-5 d-block">
+          className="sign-in-button mt-5 d-block">
           {sendingEmail ? (
             <>
             <Spinner as="span" animation="border" size="sm"
