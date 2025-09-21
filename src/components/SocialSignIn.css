@@ -1,45 +1,11 @@
-.social-button {
-  width: 91%;
+.google-button {
+  width: 89%;
   margin-left: 3%;
 }
 
 @media screen and (min-width:380px) {
-  .social-button {
-    width: 99%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .social-error {
-    padding-left: 3%;
-  }
-}
-
-@media screen and (min-width:576px) {
-  .social-button {
-    width: 98%;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .social-button {
-    width: 97%;
-  }
-}
-
-@media screen and (min-width:992px) {
-  .social-button {
-    width: 96%;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .social-button {
-    width: 94%;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  .social-button {
-    width: 92%;
+  .google-button {
+    width: 85%;
+    margin-left: 5%;
   }
 }

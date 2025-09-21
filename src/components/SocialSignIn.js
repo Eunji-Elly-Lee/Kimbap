@@ -27,10 +27,10 @@ function SocialSignIn() {
   return (
     <div>
       <Button type="submit" onClick={onClick}
-        className="social-button mt-5 d-block">
+        className="google-button mt-5 d-block">
         <FcGoogle className="mb-1" /> Continue with Google
       </Button>
-      <div className="social-error mt-3 text-center">{message}</div>
+      <div className="mt-3 text-center">{message}</div>
     </div>
   );
 }
