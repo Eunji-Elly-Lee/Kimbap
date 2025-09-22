@@ -15,7 +15,7 @@ function Order({ user }) {
     if (!user) {
       navigate("/");
     }
-  }, []);
+  }, [user, navigate]);
 
   return (
     <div className="order">
