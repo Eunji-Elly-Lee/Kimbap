@@ -30,7 +30,6 @@ input[type="checkbox"],
 button[type="submit"],
 button[type="submit"]:hover {
   border: 1px solid black;
-  border-radius: 0 !important;
 }
 
 input[type="radio"] {
