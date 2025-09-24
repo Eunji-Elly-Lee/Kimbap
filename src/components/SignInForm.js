@@ -46,7 +46,7 @@ function SignInForm() {
           </Form.Label>
           <Col xs="10" className="w-75 p-0">
             <Form.Control type="email" placeholder="Email"
-              className="border-0 border-bottom border-dark"
+              className="border-0 border-bottom border-dark rounded-0"
               value={email} onChange={(event) => setEmail(event.target.value)} />
           </Col>
         </Form.Group>
