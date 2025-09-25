@@ -75,7 +75,7 @@ function Menu({ user }) {
   return (
     <div className="menu mx-auto mt-5">
       {(user && user.email === "ellylee2020@gmail.com") ? (
-        <>
+        <div className="d-flex flex-column gap-3">
           <UploadGimbap gimbaps={gimbaps} />
           <UploadLocation />
           <div className="mt-4">
@@ -83,12 +83,14 @@ function Menu({ user }) {
             {gimbaps.map(gimbap => (
               <ManageGimbap key={gimbap.id} gimbap={gimbap} />
             ))}
+          </div>
+          <div>
             <h4>Locations</h4>
             {locations.map(location => (
               <ManageLocation key={location.id} location={location} />
             ))}
           </div>
-        </>
+        </div>
       ) : (
         (user ? (
           <OrderGimbap gimbaps={gimbaps} locations={locations} />
