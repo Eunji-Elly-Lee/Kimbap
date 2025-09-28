@@ -39,27 +39,29 @@ function ManageLocation({ location }) {
   return (
     <div className="mt-2">
       {message}
-      {editing? (
+      {editing ? (
         <Form onSubmit={onSubmit}>
           <Form.Group>
             <Form.Control type="text" value={newLocation}
               onChange={(event) => setNewLocation(event.target.value)} />
           </Form.Group>
           <Button type="submit" className="mt-2">Update</Button>
-          <Button variant="outline-dark" className="mt-2 ms-1 rounded-0"
+          <Button variant="outline-dark" className="mt-2 ms-1 px-3"
             onClick={toggleEditing}>
             Cancel
           </Button>
         </Form>
       ) : (
         <>
-        {location.location}
-        <Button type="submit" className="ms-3" onClick={toggleEditing}>
-          Edit
-        </Button>
-        <Button type="submit" className="ms-1" onClick={onDeleteClick}>
-          Delete
-        </Button>
+          <div>{location.location}</div>
+          <div className="d-flex gap-1 mt-1 mb-3">
+            <Button type="submit" className="px-4" onClick={toggleEditing}>
+              Edit
+            </Button>
+            <Button type="submit" className="px-3" onClick={onDeleteClick}>
+              Delete
+            </Button>
+          </div>
         </>
       )}
     </div>
