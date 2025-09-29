@@ -10,8 +10,8 @@ function Gimbap({ gimbap }) {
         <CurrencyFormat value={gimbap.price} displayType="text"
           decimalScale={2} prefix="$ " thousandSeparator />
       </div>
-      <div className="gimbap-image-wrapper position-relative my-3">
-        <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-image" />
+      <div className="gimbap-image-wrapper position-relative my-4">
+        <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-image w-100 h-100 rounded" />
       </div>
       <p>{gimbap.ingredients}</p>
     </div>
