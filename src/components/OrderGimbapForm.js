@@ -12,7 +12,7 @@ function OrderGimbapForm({ gimbap }) {
   const onCheckChange = (event) => {
     if (event.target.checked) {
       dispatch({
-        type:"ADD_TO_BASKET",
+        type: "ADD_TO_BASKET",
         gimbap: {
           name: gimbap.gimbapName,
           price: gimbap.price,
@@ -22,7 +22,7 @@ function OrderGimbapForm({ gimbap }) {
       setChecked(true);
     } else {
       dispatch({
-        type:"REMOVE_FROM_BASKET",
+        type: "REMOVE_FROM_BASKET",
         name: gimbap.gimbapName
       });
       setChecked(false);
@@ -31,7 +31,7 @@ function OrderGimbapForm({ gimbap }) {
   const onPriceChange = (event) => {
     const { value } = event.target;
     dispatch({
-      type:"UPDATE_QUANTITY",
+      type: "UPDATE_QUANTITY",
       name: gimbap.gimbapName,
       quantity: value
     });
@@ -64,8 +64,8 @@ function OrderGimbapForm({ gimbap }) {
           disabled={!checked} className="number-input" value={quantity}
           onChange={onPriceChange} />
       </div>
-      <div className="gimbap-form-image-wrapper position-relative my-3">
-        <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-form-image" />
+      <div className="gimbap-form-image-wrapper position-relative my-4">
+        <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-form-image w-100 h-100 rounded" />
       </div>
       <p>{gimbap.ingredients}</p>
     </Form.Group>

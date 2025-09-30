@@ -2,16 +2,31 @@
   width: 55px;
   height: 25px;
 }
-.gimbap-form-image {
-  width: 250px;
+
+.gimbap-form-image-wrapper {
+  min-width: 160px;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
 }
+
 .gimbap-form-image-wrapper::before {
   position: absolute;
   content: '';
   display: block;
-  width: 250px;
-  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid black;
+  border-radius: 3px;
   z-index: -1;
   inset: 0;
   transform: rotate(5deg);
+}
+
+.gimbap-form-image-wrapper:hover::before {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+.gimbap-form-image {
+  object-fit: cover;
 }
