@@ -49,7 +49,7 @@ function OrderGimbapForm({ gimbap }) {
   }, [state, gimbap]);
 
   return (
-    <Form.Group>
+    <Form.Group className="mb-4">
       <div className="d-flex">
         <Form.Check type="checkbox" id={gimbap.gimbapName} checked={checked}
           name="gimbaps" onChange={onCheckChange} />
@@ -64,7 +64,7 @@ function OrderGimbapForm({ gimbap }) {
           disabled={!checked} className="number-input" value={quantity}
           onChange={onPriceChange} />
       </div>
-      <div className="gimbap-form-image-wrapper position-relative my-4">
+      <div className="gimbap-form-image-wrapper position-relative mt-3 mb-4">
         <img src={gimbap.imageUrl} alt="gimbap" className="gimbap-form-image w-100 h-100 rounded" />
       </div>
       <p>{gimbap.ingredients}</p>
