@@ -76,7 +76,7 @@ function Payment({ user }) {
       </p>
       <p>{state.location}</p>
       <Form onSubmit={onSubmit}>
-        <CardElement onChange={onChange} className="border py-2" />
+        <CardElement onChange={onChange} className="border border-dark rounded p-3" />
         <div className="mt-3 text-center">{message}</div>
         <Button type="submit" disabled={processing} className="w-100 mt-3">
           {processing ? (
