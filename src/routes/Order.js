@@ -18,14 +18,12 @@ function Order({ user }) {
   }, [user, navigate]);
 
   return (
-    <div className="order">
-      {user ? (
+    <div className="order d-flex align-items-center mx-auto px-3">
+      <div className="w-100">
         <Elements stripe={stripePromise}>
           <Payment user={user} />
         </Elements>
-      ) : (
-        <></>
-      )}
+        </div>
     </div>
   );
 }

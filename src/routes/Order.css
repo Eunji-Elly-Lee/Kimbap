@@ -1,35 +1,12 @@
 .order {
-  width: 92%;
-  margin: 8vh auto 30vh;
+  width: 90%;
+  max-width: 750px;
+  min-height: 75vh;
+  margin-bottom: 10vh;
 }
 
 @media screen and (min-width:576px) {
   .order {
-    width: 83%;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .order {
-    width: 77%;
-  }
-}
-
-@media screen and (min-width:992px) {
-  .order {
     width: 70%;
-    margin-bottom: 36vh;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .order {
-    width: 62%;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  .order {
-    width: 52%;
   }
 }
