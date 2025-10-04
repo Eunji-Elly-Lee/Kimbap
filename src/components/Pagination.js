@@ -41,7 +41,7 @@ function Pagination({ currentPage, totalCount, pageSize, onPageChange }) {
 
   return (
     <div>
-      <ul className="d-flex justify-content-center">
+      <ul className="d-flex justify-content-center mt-5">
         <li className="pagination-button me-1" onClick={() => onPrevious()}>
           <GrPrevious />
         </li>
