@@ -19,25 +19,25 @@ function Orders({ user }) {
     setCurrentPage(pageChange);
   };
   useEffect(() => {
-    if(user) {
+    if (user) {
       if (user.email === "ellylee2020@gmail.com") {
         dbService.collection("orders").orderBy("location", "desc")
           .onSnapshot(snapshot => {
             const orderArray = snapshot.docs.map(doc => ({
               id: doc.id,
               ...doc.data()
-          }));
-          setOrders(orderArray);
-        });
+            }));
+            setOrders(orderArray);
+          });
       } else {
         dbService.collection("orders").where("name", "==", user.email)
           .orderBy("location", "desc").onSnapshot(snapshot => {
             const orderArray = snapshot.docs.map(doc => ({
               id: doc.id,
               ...doc.data()
-          }));
-          setOrders(orderArray);
-        });
+            }));
+            setOrders(orderArray);
+          });
       }
     } else {
       navigate("/");
@@ -45,30 +45,31 @@ function Orders({ user }) {
   }, [user, navigate]);
 
   return (
-    <div className={currentPaginationData.length > 3 ?
-      "orders orders-long" : "orders orders-short"}>
-      {currentPaginationData.map(order => (
-        <div key={order.id} className="mb-4">
-          <h5>{order.location}</h5>
-          <p>
-            {(user && user.email === "ellylee2020@gmail.com") && (
-              <>
-              {order.name} /&nbsp;
-              </>
-            )}
-            <CurrencyFormat value={order.amount} displayType="text"
-              decimalScale={2} prefix="$ " thousandSeparator />
-            <small> ({order.orderDate})</small>
-          </p>
-          {order.basket.map(gimbap => (
-            <p key={gimbap.name} className="m-2">
-              {gimbap.name}: {gimbap.quantity}EA
+    <div className="orders d-flex align-items-center mx-auto px-3">
+      <div className="w-100">
+        {currentPaginationData.map(order => (
+          <div key={order.id} className="mb-4">
+            <h5>{order.location}</h5>
+            <p>
+              {(user && user.email === "ellylee2020@gmail.com") && (
+                <>
+                  {order.name} /&nbsp;
+                </>
+              )}
+              <CurrencyFormat value={order.amount} displayType="text"
+                decimalScale={2} prefix="$ " thousandSeparator />
+              <small> ({order.orderDate})</small>
             </p>
-          ))}
-        </div>
-      ))}
-      <Pagination currentPage={currentPage} totalCount={orders.length}
-        pageSize={PAGE_SIZE} onPageChange={updatePage} />
+            {order.basket.map(gimbap => (
+              <p key={gimbap.name} className="m-2">
+                {gimbap.name}: {gimbap.quantity}EA
+              </p>
+            ))}
+          </div>
+        ))}
+        <Pagination currentPage={currentPage} totalCount={orders.length}
+          pageSize={PAGE_SIZE} onPageChange={updatePage} />
+      </div>
     </div>
   );
 }

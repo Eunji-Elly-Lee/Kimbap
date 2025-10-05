@@ -1,39 +1,12 @@
 .orders {
-  width: 92%;
-}
-.orders-long {
-  margin: 3vh auto 8vh;
-}
-.orders-short {
-  margin: 8vh auto 30vh;
+  width: 90%;
+  max-width: 750px;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 
 @media screen and (min-width:576px) {
   .orders {
-    width: 83%;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .orders {
-    width: 77%;
-  }
-}
-
-@media screen and (min-width:992px) {
-  .orders {
     width: 70%;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .orders {
-    width: 62%;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  .orders {
-    width: 52%;
   }
 }
