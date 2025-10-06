@@ -34,36 +34,43 @@ function Pagination({ currentPage, totalCount, pageSize, onPageChange }) {
     }
   };
   const onPrevious = () => {
-    if (currentPage > 1 ) {
+    if (currentPage > 1) {
       onPageChange(currentPage - 1);
     }
   };
 
   return (
     <div>
-      <ul className="d-flex justify-content-center mt-5">
-        <li className="pagination-button me-1" onClick={() => onPrevious()}>
+      <ul className="d-flex justify-content-center mt-5 gap-3">
+        <li
+          className={`pagination-button ${currentPage === 1 ? "disabled" : ""}`}
+          onClick={() => onPrevious()}
+        >
           <GrPrevious />
         </li>
         {paginationBar.map((pageNumber, index) => {
           if (pageNumber === DOTS) {
             return (
-              <li key={index} className="mx-3">
-                &#8230;
-              </li>
+              <li key={index}>&#8230;</li>
             );
           } else {
             return (
-              <li key={index} className={currentPage === pageNumber ?
-                "pagination-button mx-1 px-2 bg-secondary bg-opacity-25" :
-                "pagination-button mx-1 px-2"}
+              <li
+                key={index}
+                className={`
+                  pagination-button
+                  ${currentPage === pageNumber ? "active bg-secondary bg-opacity-25 px-2 rounded" : ""}
+                `}
                 onClick={() => onPageChange(pageNumber)}>
                 {pageNumber}
               </li>
             );
           }
         })}
-        <li className="pagination-button ms-1" onClick={() => onNext()}>
+        <li
+          className={`pagination-button ${currentPage === LAST_PAGE ? "disabled" : ""}`}
+          onClick={() => onNext()}
+        >
           <GrNext />
         </li>
       </ul>

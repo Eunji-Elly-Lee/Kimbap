@@ -1,3 +1,8 @@
-.pagination-button:hover {
+.pagination-button {
   cursor: pointer;
+}
+
+.pagination-button.disabled,
+.pagination-button.active {
+  cursor: default;
 }
