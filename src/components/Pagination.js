@@ -8,14 +8,14 @@ function Pagination({ currentPage, totalCount, pageSize, onPageChange }) {
   const LAST_PAGE = Math.ceil(totalCount / pageSize);
   const paginationBar = useMemo(() => {
     const pageNumbers = [];
-    if (LAST_PAGE <= 3) {
+    if (LAST_PAGE <= 5) {
       for (let i = 1; i <= LAST_PAGE; i++) {
         pageNumbers.push(i);
       }
     } else {
-      if (currentPage <= 2) {
+      if (currentPage <= 3) {
         pageNumbers.push(1, 2, 3, DOTS, LAST_PAGE);
-      } else if (currentPage >= LAST_PAGE - 1) {
+      } else if (currentPage >= LAST_PAGE - 2) {
         pageNumbers.push(
           1, DOTS, LAST_PAGE - 2, LAST_PAGE - 1, LAST_PAGE
         );
