@@ -47,28 +47,34 @@ function Orders({ user }) {
   return (
     <div className="orders d-flex align-items-center mx-auto px-3">
       <div className="w-100">
-        {currentPaginationData.map(order => (
-          <div key={order.id} className="mb-4">
-            <h5>{order.location}</h5>
-            <p>
-              {(user && user.email === "ellylee2020@gmail.com") && (
-                <>
-                  {order.name} /&nbsp;
-                </>
-              )}
-              <CurrencyFormat value={order.amount} displayType="text"
-                decimalScale={2} prefix="$ " thousandSeparator />
-              <small> ({order.orderDate})</small>
-            </p>
-            {order.basket.map(gimbap => (
-              <p key={gimbap.name} className="m-2">
-                {gimbap.name}: {gimbap.quantity}EA
-              </p>
+        {orders.length === 0 ? (
+          <h5 className="text-center mt-5">No orders yet!</h5>
+        ) : (
+          <>
+            {currentPaginationData.map(order => (
+              <div key={order.id} className="mb-4">
+                <h5>{order.location}</h5>
+                <p>
+                  {(user && user.email === "ellylee2020@gmail.com") && (
+                    <>
+                      {order.name} /&nbsp;
+                    </>
+                  )}
+                  <CurrencyFormat value={order.amount} displayType="text"
+                    decimalScale={2} prefix="$ " thousandSeparator />
+                  <small> ({order.orderDate})</small>
+                </p>
+                {order.basket.map(gimbap => (
+                  <p key={gimbap.name} className="m-2">
+                    {gimbap.name}: {gimbap.quantity}EA
+                  </p>
+                ))}
+              </div>
             ))}
-          </div>
-        ))}
-        <Pagination currentPage={currentPage} totalCount={orders.length}
-          pageSize={PAGE_SIZE} onPageChange={updatePage} />
+            <Pagination currentPage={currentPage} totalCount={orders.length}
+              pageSize={PAGE_SIZE} onPageChange={updatePage} />
+          </>
+        )}
       </div>
     </div>
   );
