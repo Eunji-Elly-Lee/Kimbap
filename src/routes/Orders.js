@@ -48,7 +48,7 @@ function Orders({ user }) {
     <div className="orders d-flex align-items-center mx-auto px-3">
       <div className="w-100">
         {orders.length === 0 ? (
-          <h5 className="text-center mt-5">No orders yet!</h5>
+          <h4 className="text-center mt-5 fs-5">No orders yet!</h4>
         ) : (
           <>
             {currentPaginationData.map(order => (
